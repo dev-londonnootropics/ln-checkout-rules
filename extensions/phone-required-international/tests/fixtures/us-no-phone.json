@@ -1,0 +1,35 @@
+{
+  "payload": {
+    "export": "cart-validations-generate-run",
+    "target": "cart.validations.generate.run",
+    "input": {
+      "buyerJourney": {
+        "step": "CHECKOUT_COMPLETION"
+      },
+      "cart": {
+        "deliveryGroups": [
+          {
+            "deliveryAddress": {
+              "countryCode": "US",
+              "phone": null
+            }
+          }
+        ]
+      }
+    },
+    "output": {
+      "operations": [
+        {
+          "validationAdd": {
+            "errors": [
+              {
+                "message": "Please enter a phone number for international delivery.",
+                "target": "$.cart.deliveryGroups[0].deliveryAddress.phone"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

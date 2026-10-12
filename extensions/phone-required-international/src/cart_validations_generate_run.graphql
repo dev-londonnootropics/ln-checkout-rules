@@ -1,0 +1,13 @@
+query CartValidationsGenerateRunInput {
+  buyerJourney {
+    step
+  }
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        countryCode
+        phone
+      }
+    }
+  }
+}
